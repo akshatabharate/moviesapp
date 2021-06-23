@@ -8,6 +8,6 @@ class MoviesController < ApplicationController
     end
 
    private def movie_params
-      param.requere(:movie).permit(:title, :rating)
+      param.requere(:movie).permit(:title, :rating, :releasedon, :summery)
    end
 end
