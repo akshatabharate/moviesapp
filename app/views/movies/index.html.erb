@@ -1,12 +1,18 @@
 <%# <h3> list of movies</h3>
 <h4>[chak de india, DDLJ]</h4> %>
+
+
 <h1>movies</h1>
 
 <% @movies.each do |f| %>
 <div>
-<h2><%= f.title%></h2>
-<h2><%= f.rating%></h2>
-<h2><%= f.releasedon%></h2>
-<h2><%= f.summery%></h2>
+<h2> Title:
+<%= f.title%></h2>
+<h2>Rating:
+<%= f.rating%></h2>
+<h2>Released_on:
+<%= f.releasedon.strftime("%d-%B-%Y")  %></h2>
+<h2>Summery: 
+<p><%= f.summery%></h2>
 </div>
 <% end%>
